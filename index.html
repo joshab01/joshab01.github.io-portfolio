@@ -37,7 +37,7 @@ body{font-family:var(--font-body);background:var(--bg-deep);color:var(--text-pri
   box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 .audio-module:hover { background: var(--bg-card-hover); border-color: var(--accent); box-shadow: 0 4px 25px var(--accent-glow); }
-.audio-text { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-muted); text-transform: uppercase; transition: color 0.3s; }
+.audio-text { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-muted); text-transform: uppercase; transition: color 0.3s; min-width: 120px; text-align: center; }
 .audio-module.playing .audio-text { color: var(--accent); }
 .audio-module.error .audio-text { color: #ff5252; } 
 
@@ -235,7 +235,7 @@ body { cursor: auto; }
 <body>
 
 <audio id="ambient-audio" loop preload="auto">
-  <source src="file:///C:/Users/josha/Documents/New%20folder/background-music.mp3" type="audio/mpeg">
+  <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 <div class="audio-module" id="audioToggle">
@@ -276,7 +276,7 @@ body { cursor: auto; }
 <a href="#reflection" class="hero-cta">Intercept My Story →</a>
 </div>
 <div class="hero-photo">
-<div class="photo-placeholder"><span class="initials">AJ</span><span>Add photo</span></div>
+  <img src="profile.jpg" alt="Abhay Joshi">
 </div>
 </div></section>
 
@@ -459,22 +459,22 @@ body { cursor: auto; }
 <footer><p>Built by hand. No templates. — Abhay Joshi, 2026</p></footer>
 
 <script>
-// --- 0. System Audio Safe Logic ---
+// --- 0. System Audio Safe Logic (GitHub Pages Hosted) ---
 const bgAudio = document.getElementById('ambient-audio');
 const audioBtn = document.getElementById('audioToggle');
 const audioText = audioBtn.querySelector('.audio-text');
 
+// Lower volume since it's background music
 bgAudio.volume = 0.25;
 
 audioBtn.addEventListener('click', () => {
   if (bgAudio.paused) {
-    // Removed the strict 'file://' block. It will just try to play normally now.
     bgAudio.play().then(() => {
       audioBtn.classList.remove('error');
       audioBtn.classList.add('playing');
       audioText.innerText = 'SYS.AUDIO [ON]';
     }).catch(error => {
-      console.log("Audio Error:", error);
+      console.error("Audio Error: ", error);
       audioBtn.classList.add('error');
       audioText.innerText = 'SYS.AUDIO [ERR]';
       
