@@ -37,7 +37,7 @@ body{font-family:var(--font-body);background:var(--bg-deep);color:var(--text-pri
   box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 .audio-module:hover { background: var(--bg-card-hover); border-color: var(--accent); box-shadow: 0 4px 25px var(--accent-glow); }
-.audio-text { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-muted); text-transform: uppercase; transition: color 0.3s; min-width: 120px; text-align: center; }
+.audio-text { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-muted); text-transform: uppercase; transition: color 0.3s; }
 .audio-module.playing .audio-text { color: var(--accent); }
 .audio-module.error .audio-text { color: #ff5252; } 
 
@@ -81,7 +81,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;background:rg
 .hero-photo{flex-shrink:0;width:220px;height:220px;border-radius:50%;overflow:hidden;border:3px solid var(--accent);box-shadow:0 0 40px var(--accent-glow)}
 .hero-photo img{width:100%;height:100%;object-fit:cover}
 .photo-placeholder{width:100%;height:100%;background:linear-gradient(135deg,var(--bg-card),var(--bg-card-hover));display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--text-muted);font-size:.7rem;text-align:center;padding:1rem}
-.-placeholder .initials{font-family:var(--font-display);font-size:3.5rem;color:var(--accent);margin-bottom:.5rem;line-height:1}
+.photo-placeholder .initials{font-family:var(--font-display);font-size:3.5rem;color:var(--accent);margin-bottom:.5rem;line-height:1}
 .hero-eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
 .hero-eyebrow::before{content:'';width:40px;height:1.5px;background:var(--accent)}
 .hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.5rem);font-weight:400;line-height:1.25;margin-bottom:1.5rem}
@@ -235,9 +235,7 @@ body { cursor: auto; }
 <body>
 
 <audio id="ambient-audio" loop preload="auto">
-  <source src="./music.mp3" type="audio/mpeg">
-  
-  <source src="https://actions.google.com/sounds/v1/science_fiction/ambient_hum.ogg" type="audio/ogg">
+  <source src="file:///C:/Users/josha/Documents/New%20folder/background-music.mp3" type="audio/mpeg">
 </audio>
 
 <div class="audio-module" id="audioToggle">
@@ -278,7 +276,7 @@ body { cursor: auto; }
 <a href="#reflection" class="hero-cta">Intercept My Story →</a>
 </div>
 <div class="hero-photo">
-  <img src="profile1.JPG" alt="Abhay Joshi">
+<img src="AbhayJ.jpg" alt="Abhay Joshi">
 </div>
 </div></section>
 
@@ -303,28 +301,28 @@ body { cursor: auto; }
   </div>
 
   <div class="jr-opening reveal">
-    <div class="jr-opening-label">A Personal Reflection</div>
-    <h2 class="jr-opening-title">Dreams don't build careers.<br><em style="color:var(--accent)">Leaps do.</em></h2>
-    <p class="jr-opening-sub">This isn't a résumé. This is the story between the lines — the cities, the doubts, the late nights, and the one rule that kept me moving forward.</p>
+    <div class="jr-opening-label">A Career Evolution</div>
+    <h2 class="jr-opening-title">Titles don't drive impact.<br><em style="color:var(--accent)">Transformations do.</em></h2>
+    <p class="jr-opening-sub">This isn't a standard résumé. This is the story of my evolution — from a service-industry analyst to leading a global Center of Excellence, scaling data across continents.</p>
   </div>
 
   <div class="jr-chapter" data-chapter="1">
-    <div class="jr-city">Baroda</div>
+    <div class="jr-city">Service</div>
     <div class="jr-dot" style="top:2rem"></div>
-    <div class="jr-dot-label" style="top:2rem">2006–2017</div>
+    <div class="jr-dot-label" style="top:2rem">2011–2017</div>
     <div class="jr-chapter-inner">
       <div class="jr-number">01</div>
-      <div class="jr-location">Baroda — Ahmedabad — Gujarat</div>
-      <h3 class="jr-title">The Foundation Years</h3>
+      <div class="jr-location">TCS — Analytics Lead</div>
+      <h3 class="jr-title">The Analyst Foundation</h3>
       
       <div class="jr-narrative">
-        <p class="decrypt-text">I started with statistics textbooks and the quiet conviction that numbers could explain anything. Baroda taught me patience. Ahmedabad taught me rigor. Years at St. Xavier's and Sardar Patel University gave me the mathematical spine — probability theory, Bayesian estimation, matrix algebra — that I didn't know I'd need a decade later.</p>
-        <p class="decrypt-text">Then TCS. Six years of grinding through 60+ analytics projects, leading a team of 8, learning how large enterprises actually make decisions. It wasn't glamorous. It was necessary. I was building the framework needed to survive — mastering professionalism, learning to lead teams, proving that my potential was to solve problems and succeed together.</p>
+        <p class="decrypt-text">I began my journey in the service industry at TCS, operating as an Analytics Lead. Grinding through 60+ analytics projects, I managed pricing and promotion analytics for LATAM and supported European teams.</p>
+        <p class="decrypt-text">It was here that I learned how to translate raw data into strategic business goals, mastering the rigorous validation processes needed to support large enterprises. Winning the Nielsen 'Star of the Year' for three consecutive years taught me the value of sustained excellence.</p>
         <span class="terminal-cursor"></span>
       </div>
 
       <div class="jr-quote">
-        "These years weren't about speed. They were about building a foundation so solid that nothing built on top of it could ever collapse."
+        "The service industry wasn't just about executing projects; it was about building the resilience and foundational rigor needed for everything that followed."
       </div>
     </div>
   </div>
@@ -332,24 +330,22 @@ body { cursor: auto; }
   <div class="jr-separator"></div>
 
   <div class="jr-chapter" data-chapter="2">
-    <div class="jr-city">Mumbai</div>
+    <div class="jr-city">FMCG</div>
     <div class="jr-dot" style="top:2rem"></div>
-    <div class="jr-dot-label" style="top:2rem">2018</div>
+    <div class="jr-dot-label" style="top:2rem">2018–2022</div>
     <div class="jr-chapter-inner">
       <div class="jr-number">02</div>
-      <div class="jr-location">Mumbai — The Big Leap</div>
-      <h3 class="jr-title">From a Tier-2 City to the Deep End</h3>
+      <div class="jr-location">General Mills — PepsiCo</div>
+      <h3 class="jr-title">Transition to Product & Global Impact</h3>
       
       <div class="jr-narrative">
-        <p class="decrypt-text">Moving to Mumbai was not a promotion. It was a shock.</p>
-        <p class="decrypt-text">Everything was faster. The expectations were higher. The competition was brutal. I was overwhelmed — absorbing the environment, trying to find my footing in a city that doesn't wait for anyone to catch up. There were weeks when I questioned the move entirely.</p>
-        <p class="decrypt-text">But I gave myself time. Time to frame my mind. Time to understand the new rules. And then I jumped into the pool. Because I realized there was only one way forward: upscale. Be relevant. Do something unique. Build trust. Lead by example.</p>
-        <p class="decrypt-text">At General Mills, I taught myself Python on weekends. Built my first scikit-learn models after the kids went to sleep. Deployed a forecasting system that hit 85% accuracy. Won a National Sales Award from Canada. Led 6 analysts across two continents.</p>
+        <p class="decrypt-text">The jump to product and FMCG giants was a defining pivot. At General Mills and PepsiCo, I evolved from delivering analysis to architecting advanced predictive models.</p>
+        <p class="decrypt-text">I built pricing elasticity tools and forecasting pipelines that influenced markets across Europe, Asia, and North America. Winning a National Sales Award in Canada for a forecasting solution that generated over $100K in annual savings taught me what it means to build systems that directly move the global bottom line.</p>
         <span class="terminal-cursor"></span>
       </div>
 
       <div class="jr-quote">
-        "Nobody hands you a career pivot. You build it at 11 PM, one Coursera course at a time, in a city that doesn't know your name yet."
+        "Moving to product organizations shifted my mindset from answering analytical questions to predicting outcomes and driving multi-continental strategy."
       </div>
     </div>
   </div>
@@ -357,23 +353,22 @@ body { cursor: auto; }
   <div class="jr-separator"></div>
 
   <div class="jr-chapter" data-chapter="3">
-    <div class="jr-city">Excellence</div>
+    <div class="jr-city">Leadership</div>
     <div class="jr-dot" style="top:2rem"></div>
-    <div class="jr-dot-label" style="top:2rem">2021–Now</div>
+    <div class="jr-dot-label" style="top:2rem">2022–Now</div>
     <div class="jr-chapter-inner">
       <div class="jr-number">03</div>
-      <div class="jr-location">PepsiCo — Wipro — L'Oréal</div>
-      <h3 class="jr-title">The Only Way Is Forward</h3>
+      <div class="jr-location">L'Oréal — SAPMENA</div>
+      <h3 class="jr-title">Architecting the Center of Excellence</h3>
       
       <div class="jr-narrative">
-        <p class="decrypt-text">Opportunities came. Some at a cost. PepsiCo taught me to forecast at continental scale. Wipro sharpened my speed — proving that a model shipped in two weeks beats perfection shipped in six months.</p>
-        <p class="decrypt-text">Then L'Oréal called. "Build us a data science team from scratch." No team. No infrastructure. No playbook. I hired 16 people. Designed the architecture. Delivered €670K in savings in year one. Built a GenAI platform, a Bayesian skin-aging simulator, a formulation model that became a global standard. Won the 'Hats Off' Award. Got appointed GenAI Adoption Lead.</p>
-        <p class="decrypt-text">Each step on this path led here — not by luck, but by a rule I've followed since Baroda: upscale, stay relevant, do something nobody else is willing to do.</p>
+        <p class="decrypt-text">Then came the ultimate challenge at L'Oréal: transitioning into a strategic leader. I founded and scaled the R&I India Data & AI Center of Excellence from scratch to a 16-member powerhouse.</p>
+        <p class="decrypt-text">We expanded our footprint across the SAPMENA region, delivering €670K in OPEX savings, building Bayesian simulators, and embedding GenAI platforms. As the GenAI Adoption Lead, my role transformed into architecting the teams and systems that power global innovation.</p>
         <span class="terminal-cursor"></span>
       </div>
 
       <div class="jr-quote">
-        "There was only one way: upscale. Be relevant. Do something unique. Build trust. Lead with example."
+        "It was no longer just about building the best algorithm; it was about building the elite team and the architecture that scales enterprise intelligence."
       </div>
     </div>
   </div>
@@ -381,35 +376,34 @@ body { cursor: auto; }
   <div class="jr-separator"></div>
 
   <div class="jr-chapter" data-chapter="4">
-    <div class="jr-city">Forward</div>
+    <div class="jr-city">Evolution</div>
     <div class="jr-dot" style="top:2rem"></div>
     <div class="jr-dot-label" style="top:2rem">Always</div>
     <div class="jr-chapter-inner">
       <div class="jr-number">04</div>
-      <div class="jr-location">The Motto</div>
-      <h3 class="jr-title">Build the Relationship Between Learning and Skill</h3>
+      <div class="jr-location">The Global Horizon</div>
+      <h3 class="jr-title">From Analyst to Global Data Leader</h3>
       
       <div class="jr-narrative">
-        <p class="decrypt-text">The world evolves. Every six months, the tools change. Every year, the expectations reset higher. The only constant is your willingness to learn faster than the world moves.</p>
-        <p class="decrypt-text">I read books that rewire how I think — Chip Huyen, Josh Starmer, research papers on weekends. I build projects in public — not because they're perfect, but because the act of shipping proves you're still in the arena. I mentor juniors who remind me what it felt like to start from zero.</p>
-        <p class="decrypt-text">My motto is simple: the way to survive is to upscale. Build a relationship between your learning and your skills. Never let them drift apart.</p>
+        <p class="decrypt-text">Reflecting on this evolution — from executing analytical projects to directing AI adoption for global hubs — the thread connecting it all is continuous upscaling.</p>
+        <p class="decrypt-text">Navigating the unique data landscapes of LATAM, Europe, North America, AMESA, and SAPMENA has taught me that while markets differ, the need for decisive action is universal. My mission remains to push the boundaries of AI, mentoring the next generation of data scientists along the way.</p>
         <span class="terminal-cursor"></span>
       </div>
 
       <div class="jr-quote">
-        "Dreaming cannot complete your ambitions. Taking a leap in the direction of success — and giving your absolute best — that's the only thing that does."
+        "The journey from an analyst to a CoE leader is fueled by one rule: your willingness to learn must always outpace the speed at which the world changes."
       </div>
     </div>
   </div>
 
   <div class="jr-finale">
     <div class="jr-finale-quote">
-      From Baroda to Mumbai.<br>
-      From SQL queries to <span class="jr-finale-accent">leading a Center of Excellence.</span><br>
-      From watching data scientists to <span class="jr-finale-accent">becoming one.</span><br><br>
-      The story isn't over. It never is.
+      From the Service Industry to <span class="jr-finale-accent">Global Product Giants.</span><br>
+      From individual analysis to <span class="jr-finale-accent">leading Centers of Excellence.</span><br>
+      From local projects to <span class="jr-finale-accent">impact across LATAM, Europe, AMESA, and SAPMENA.</span><br><br>
+      The evolution continues.
     </div>
-    <p class="jr-finale-sub">If you're sitting in a Tier-2 city right now, wondering if the leap is worth it — it is. Start tonight.</p>
+    <p class="jr-finale-sub">If you are an analyst wondering if the leap to leadership is possible — it is. Start building today.</p>
   </div>
 
 </section>
@@ -461,22 +455,22 @@ body { cursor: auto; }
 <footer><p>Built by hand. No templates. — Abhay Joshi, 2026</p></footer>
 
 <script>
-// --- 0. System Audio Safe Logic (GitHub Pages Hosted) ---
+// --- 0. System Audio Safe Logic ---
 const bgAudio = document.getElementById('ambient-audio');
 const audioBtn = document.getElementById('audioToggle');
 const audioText = audioBtn.querySelector('.audio-text');
 
-// Lower volume since it's background music
 bgAudio.volume = 0.25;
 
 audioBtn.addEventListener('click', () => {
   if (bgAudio.paused) {
+    // Removed the strict 'file://' block. It will just try to play normally now.
     bgAudio.play().then(() => {
       audioBtn.classList.remove('error');
       audioBtn.classList.add('playing');
       audioText.innerText = 'SYS.AUDIO [ON]';
     }).catch(error => {
-      console.error("Audio Error: ", error);
+      console.log("Audio Error:", error);
       audioBtn.classList.add('error');
       audioText.innerText = 'SYS.AUDIO [ERR]';
       
